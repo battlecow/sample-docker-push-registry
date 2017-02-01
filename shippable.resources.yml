@@ -18,5 +18,5 @@ resources:
     type: cluster
     integration: ECS
     pointer:
-      sourceName : "Microservice-Testing" #replace with name of the cluster to which you are deploying
+      sourceName : "Test2" #replace with name of the cluster to which you are deploying
       region: "us-east-1" #replace with region of the cluster to which you are deploying
