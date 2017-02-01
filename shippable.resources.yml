@@ -1,12 +1,12 @@
 resources:
   - name: shipdemo-img
     type: image
-    integration: # your Amazon ECR integration
+    integration: Docker Artifactory
     pointer:
-      sourceName: "027746667844.dkr.ecr.us-east-1.amazonaws.com/sample-shipdemo" # replace with a pointer to your docker image
+      sourceName: "docker.jamf.build/test-microservice"
       isPull: false
     seed:
-      versionName: "latest"  #replace with your image tag on Amazon ECR
+      versionName: "latest"
 
   - name: shipdemo-img-options
     type: dockerOptions
@@ -16,7 +16,7 @@ resources:
 
   - name: ecs-test-cluster
     type: cluster
-    integration: aws  # your Amazon ECS integration
+    integration: Amazon ECS
     pointer:
-      sourceName : "my-cluster" #replace with name of the cluster to which you are deploying
-      region: "us-west-2" #replace with region of the cluster to which you are deploying
+      sourceName : "Microservice-Testing" #replace with name of the cluster to which you are deploying
+      region: "us-east-1" #replace with region of the cluster to which you are deploying
