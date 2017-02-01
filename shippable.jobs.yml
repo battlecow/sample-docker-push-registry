@@ -10,6 +10,6 @@ jobs:
     steps:
       - IN: shipdemo-manifest
       - IN: shipdemo-img-options
-      - IN: "Amazon ECS"
+      - IN: ecs-test-cluster
       - TASK: managed
         deployMethod: upgrade

@@ -1,7 +1,7 @@
 resources:
   - name: shipdemo-img
     type: image
-    integration: Docker Artifactory
+    integration: Docker-Artifactory
     pointer:
       sourceName: "docker.jamf.build/test-microservice"
       isPull: false
@@ -14,9 +14,9 @@ resources:
       portMappings:
         - 80:80
 
-  - name: "Amazon ECS"
+  - name: ecs-test-cluster
     type: cluster
-    integration: "Amazon ECS"
+    integration: ECS
     pointer:
       sourceName : "Microservice-Testing" #replace with name of the cluster to which you are deploying
       region: "us-east-1" #replace with region of the cluster to which you are deploying
