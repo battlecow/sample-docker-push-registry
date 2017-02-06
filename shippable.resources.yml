@@ -4,7 +4,7 @@ resources:
     integration: Docker-Artifactory
     pointer:
       sourceName: "docker.jamf.build/example-microservice"
-      isPull: false
+      isPull: true
     seed:
       versionName: "latest"
 
