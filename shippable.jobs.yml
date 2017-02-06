@@ -17,5 +17,6 @@ jobs:
           - manifest: microservice-manifest
             image: microservice-img
             port: 80
+            port: 8888
       - TASK: managed
         deployMethod: blueGreen
