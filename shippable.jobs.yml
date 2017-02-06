@@ -11,8 +11,11 @@ jobs:
       - IN: microservice-manifest
         force: true
       - IN: microservice-img-options
+        force: true
       - IN: ecs-test-cluster
+        force: true
       - IN: microservice-elb
+        force: true
         applyTo:
           - manifest: microservice-manifest
             image: microservice-img
