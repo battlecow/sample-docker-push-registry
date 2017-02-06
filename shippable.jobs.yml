@@ -11,11 +11,11 @@ jobs:
       - IN: microservice-manifest
       - IN: microservice-img-options
       - IN: ecs-test-cluster
-      - IN: microservice-elb
-        applyTo:
-          - manifest: microservice-manifest
-            image: microservice-img
-            port: 80
+      # - IN: microservice-elb
+      #   applyTo:
+      #     - manifest: microservice-manifest
+      #       image: microservice-img
+      #       port: 80
       - IN: microservice-mgmt-elb
         applyTo:
           - manifest: microservice-manifest
