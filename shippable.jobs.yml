@@ -9,11 +9,17 @@ jobs:
     type: deploy
     steps:
       - IN: microservice-manifest
-        force: true
       - IN: microservice-img-options
-        force: true
       - IN: ecs-test-cluster
-        force: true
       - IN: microservice-elb
+        applyTo:
+          - manifest: microservice-manifest
+            image: microservice-img
+            port: 80
+      - IN: microservice-mgmt-elb
+        applyTo:
+          - manifest: microservice-manifest
+            image: microservice-img
+            port: 8888
       - TASK: managed
         deployMethod: blueGreen
