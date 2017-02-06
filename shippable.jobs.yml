@@ -13,4 +13,4 @@ jobs:
       - IN: ecs-test-cluster
       - IN: microservice-elb
       - TASK: managed
-        deployMethod: upgrade
+        deployMethod: replace

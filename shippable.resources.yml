@@ -20,6 +20,7 @@ resources:
     pointer:
       sourceName : "Microservice-Testing"
       region: "us-east-1"
+  
   - name: microservice-elb
     type: loadBalancer
     integration: ECS
