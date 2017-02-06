@@ -1,5 +1,5 @@
 resources:
-  - name: shipdemo-img
+  - name: microservice-img
     type: image
     integration: Docker-Artifactory
     pointer:
@@ -8,7 +8,7 @@ resources:
     seed:
       versionName: "latest"
 
-  - name: shipdemo-img-options
+  - name: microservice-img-options
     type: dockerOptions
     version:
       portMappings:
@@ -18,5 +18,13 @@ resources:
     type: cluster
     integration: ECS
     pointer:
-      sourceName : "Microservice-Testing" #replace with name of the cluster to which you are deploying
-      region: "us-east-1" #replace with region of the cluster to which you are deploying
+      sourceName : "Microservice-Testing"
+      region: "us-east-1"
+  - name: microservice-elb
+    type: loadBalancer
+    integration: ECS
+    pointer:
+      sourceName: "microservice-elb"
+      method: classic
+      clusterName: ecs-test-cluster
+      region: "us-east-1"
