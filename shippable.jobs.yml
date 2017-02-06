@@ -20,6 +20,9 @@ jobs:
           - manifest: microservice-manifest
             image: microservice-img
             port: 80
+      - IN: microservice-elb
+        force: true
+        applyTo:
           - manifest: microservice-manifest
             image: microservice-img
             port: 8888
