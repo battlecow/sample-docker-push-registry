@@ -1,15 +1,16 @@
 jobs:
-  - name: shipdemo-manifest
+  - name: microservice-manifest
     type: manifest
     steps:
-     - IN: shipdemo-img
+     - IN: microservice-img
      - TASK: managed
 
-  - name: shipdemo-test-deploy
+  - name: microservice-deploy
     type: deploy
     steps:
-      - IN: shipdemo-manifest
-      - IN: shipdemo-img-options
+      - IN: microservice-manifest
+      - IN: microservice-img-options
       - IN: ecs-test-cluster
+      - IN: microservice-elb
       - TASK: managed
         deployMethod: upgrade
