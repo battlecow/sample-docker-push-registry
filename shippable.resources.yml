@@ -13,7 +13,7 @@ resources:
     version:
       portMappings:
         - 80:80
-        - 8888
+        - :8888
 
   - name: ecs-test-cluster
     type: cluster
