@@ -25,7 +25,7 @@ resources:
     type: loadBalancer
     integration: ECS
     pointer:
-      sourceName: "microservice-elb"
+      sourceName: MicroserviceTest
       method: classic
       clusterName: ecs-test-cluster
       region: "us-east-1"
