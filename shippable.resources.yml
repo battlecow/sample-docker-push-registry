@@ -26,7 +26,7 @@ resources:
     type: loadBalancer
     integration: ECS
     pointer:
-      sourceName: "arn:aws:elasticloadbalancing:us-east-1:067142875141:loadbalancer/app/MicroserviceTest/70b3a40b57eddacb"
+      sourceName: "arn:aws:elasticloadbalancing:us-east-1:067142875141:targetgroup/test/bf96ee21abd6c417"
       method: application
       clusterName: ecs-test-cluster
       region: "us-east-1"
