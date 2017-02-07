@@ -30,6 +30,7 @@ resources:
       method: application
       clusterName: ecs-test-cluster
       region: "us-east-1"
+
   - name: microservice-mgmt-elb
     type: loadBalancer
     integration: ECS

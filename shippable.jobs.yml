@@ -22,4 +22,4 @@ jobs:
             image: microservice-img
             port: 8888
       - TASK: managed
-        deployMethod: blueGreen
+        deployMethod: replace
