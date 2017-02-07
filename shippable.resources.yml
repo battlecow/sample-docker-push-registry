@@ -22,14 +22,14 @@ resources:
       sourceName : "Microservice-Testing"
       region: "us-east-1"
   
-  # - name: microservice-elb
-  #   type: loadBalancer
-  #   integration: ECS
-  #   pointer:
-  #     sourceName: "arn:aws:elasticloadbalancing:us-east-1:067142875141:targetgroup/MicroserviceTest/1999fb4389546b4f"
-  #     method: application
-  #     clusterName: ecs-test-cluster
-  #     region: "us-east-1"
+  - name: microservice-elb
+    type: loadBalancer
+    integration: ECS
+    pointer:
+      sourceName: "arn:aws:elasticloadbalancing:us-east-1:067142875141:targetgroup/MicroserviceTest/1999fb4389546b4f"
+      method: application
+      clusterName: ecs-test-cluster
+      region: "us-east-1"
   - name: microservice-mgmt-elb
     type:
       loadBalancer
