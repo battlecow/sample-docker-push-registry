@@ -11,7 +11,7 @@ jobs:
       - IN: microservice-manifest
       - IN: microservice-img-options
       - IN: ecs-test-cluster
-      - IN: microservice-mgmt-elb
+      - IN: microservice-elb
         applyTo:
           - manifest: microservice-manifest
             image: microservice-img
