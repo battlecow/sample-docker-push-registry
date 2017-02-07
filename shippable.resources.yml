@@ -26,7 +26,7 @@ resources:
     type: loadBalancer
     integration: ECS
     pointer:
-      sourceName: "arn:aws:elasticloadbalancing:us-east-1:067142875141:targetgroup/Microservice/1999fb4389546b4f"
+      sourceName: "arn:aws:elasticloadbalancing:us-east-1:067142875141:listener-rule/app/MicroserviceTestMgmt/fb9bb709de462e7e/37f85d0b44d1c676/60ec1b607ca177e4"
       method: application
       clusterName: ecs-test-cluster
       region: "us-east-1"
@@ -34,7 +34,7 @@ resources:
     type: loadBalancer
     integration: ECS
     pointer:
-      sourceName: "arn:aws:elasticloadbalancing:us-east-1:067142875141:targetgroup/MicroserviceTestMgmt/8e48c021ef4d00bd"
+      sourceName: "arn:aws:elasticloadbalancing:us-east-1:067142875141:listener-rule/app/MicroserviceTestMgmt/fb9bb709de462e7e/37f85d0b44d1c676/40ff8acecc382f32"
       method: application
       clusterName: ecs-test-cluster
       region: "us-east-1"
