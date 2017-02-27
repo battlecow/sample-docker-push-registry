@@ -16,10 +16,9 @@ jobs:
           - manifest: microservice-manifest
             image: microservice-img
             port: 80
-      - IN: microservice-elb
         applyTo:
           - manifest: microservice-manifest
             image: microservice-img
-            port: 8888            
+            port: 8888
       - TASK: managed
         deployMethod: blueGreen
