@@ -12,8 +12,8 @@ resources:
     type: dockerOptions
     version:
       portMappings:
-        - 0:80
-        - 0:8888
+        - "80:80"
+        - "8888:8888"
 
   - name: ecs-test-cluster
     type: cluster
@@ -26,16 +26,7 @@ resources:
     type: loadBalancer
     integration: ECS
     pointer:
-      sourceName: "arn:aws:elasticloadbalancing:us-east-1:067142875141:targetgroup/Microservice/1999fb4389546b4f"
-      method: application
+      sourceName: "Microservice-testing"
+      method: classic
       clusterName: ecs-test-cluster
-      region: "us-east-1"
-      
-  - name: microservice-mgmt-elb
-    type: loadBalancer
-    integration: ECS
-    pointer:
-      sourceName: "arn:aws:elasticloadbalancing:us-east-1:067142875141:targetgroup/MicroserviceTestMgmt/8e48c021ef4d00bd"
-      method: application
-      clusterName: ecs-test-cluster
-      region: "us-east-1"
+      region: "us-east-1"  
